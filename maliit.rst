@@ -63,16 +63,19 @@ maliit-pluginの日本語化
   - 将来性を考えると本家をベースにするのがベスト
 
   - ただしテスト環境にTouchを使うことを考えるとTouchでまともに動いている
-    0.94.2 + phabletをベースにせざるを得ない
+    0.94.0 + phabletをベースにせざるを得ない
 
-  => Touchベースで
+  - VirtualBoxでMaliitを動かせるようなら、0.99ベースも可能かもしれない
+
+  => MRがすぐに終わりそうならTouchベースで
 
 
 下準備
 ======
+ ::
 
-    sudo add-apt-repository ppa:ubuntu-sdk-team/ppa
-    sudo apt-get update
-    sudo apt-get install ubuntu-sdk maliit-framework-dev
+    $ sudo add-apt-repository ppa:ubuntu-sdk-team/ppa
+    $ sudo apt-get update
+    $ sudo apt-get install ubuntu-sdk maliit-framework-dev
 
 
