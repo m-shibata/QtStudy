@@ -14,15 +14,20 @@ maliit-pluginの日本語化
 ============
 
 - 本家のMaliit
-  http://gitorious.org/maliit/maliit-framework
-  http://gitorious.org/maliit/maliit-plugins
+
+  - http://gitorious.org/maliit/maliit-framework
+
+  - http://gitorious.org/maliit/maliit-plugins
 
 - Ubuntu TouchのMaliit
-  https://code.launchpad.net/~phablet-team/phablet-extras/maliit-framework
-  https://code.launchpad.net/~phablet-team/phablet-extras/maliit-plugins
+
+  - https://code.launchpad.net/~phablet-team/phablet-extras/maliit-framework
+
+  - https://code.launchpad.net/~phablet-team/phablet-extras/maliit-plugins
 
 - maliit-plugin-jp
-  http://code.google.com/p/maliit-plugin-jp/
+
+  - http://code.google.com/p/maliit-plugin-jp/
 
 
 方針
@@ -42,22 +47,32 @@ maliit-pluginの日本語化
   あと開発者Michaelは日本語キーボード追加に乗り気らしい。
 
 - Maliitのバージョンについて
+
   - 本家：0.99（Wayland対応とか入ってる）
+
   - Raring：0.94.2（たぶんplane）
-  - Touch: 0.94.2 + かなり独自実装
+
+  - Touch: 0.94.0 + かなり独自実装
+
+    - maliit-keyboardを有効にするMRはでている
+
+    - https://code.launchpad.net/~thomas-moenicke/phablet-extras/maliit-plugins_maliit-keyboard/+merge/158101
 
 - どれをベースにする？
+
   - 将来性を考えると本家をベースにするのがベスト
+
   - ただしテスト環境にTouchを使うことを考えるとTouchでまともに動いている
     0.94.2 + phabletをベースにせざるを得ない
+
   => Touchベースで
+
 
 下準備
 ======
 
-sudo add-apt-repository ppa:ubuntu-sdk-team/ppa
-sudo apt-get update
-sudo apt-get install ubuntu-sdk maliit-framework-dev
+    sudo add-apt-repository ppa:ubuntu-sdk-team/ppa
+    sudo apt-get update
+    sudo apt-get install ubuntu-sdk maliit-framework-dev
 
-（他にもいると思うけど未確認）
 
