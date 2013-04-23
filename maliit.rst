@@ -35,7 +35,7 @@ maliit-pluginの日本語化
 
 - maliit-plugin-jpについて
 
-  0.8以前のMaliitをベースに当時足りなかったものをいろいろと自前で追加したので、
+  0.8以前のMaliitをベースに当時足りなかったものをいろいろと自前で追加したものであり、
   これのポーティングは大変なのであまりおすすめしないらしい。
 
   あくまで「参考」に止める程度で。
@@ -52,24 +52,32 @@ maliit-pluginの日本語化
 
   - 本家：0.99（Wayland対応とか入ってる）
 
-  - Raring：0.94.2（たぶんplane）
+  - Raring：本家の0.94.2と同じ
 
-  - Touch: 0.94.0 + かなり独自実装
+  - Touch: 0.94.0 + 一部 0.99相当 + かなり独自実装？
 
     - maliit-keyboardを有効にするMRはでている
 
     - https://code.launchpad.net/~thomas-moenicke/phablet-extras/maliit-plugins_maliit-keyboard/+merge/158101
 
+    - https://code.launchpad.net/~thomas-moenicke/phablet-extras/maliit-plugins_stretched-sizes/+merge/160295
+
+
+
 - どれをベースにする？
 
   - 将来性を考えると本家をベースにするのがベスト
 
-  - ただしテスト環境にTouchを使うことを考えるとTouchでまともに動いている
+    - ただしテスト方法を確立できていない
+
+    - VirtualBoxでMaliitを動かせるようなら、0.99ベースも可能かもしれない
+
+  - テスト環境にTouchを使うことを考えるとTouchでまともに動いている
     0.94.0 + phabletをベースにせざるを得ない
 
-  - VirtualBoxでMaliitを動かせるようなら、0.99ベースも可能かもしれない
+    - この場合ビルド時間がネックになる
 
-  => MRがすぐに終わりそうならTouchベースで
+  => MRがすぐに終わりそうなのでTouchベースで考えてみる
 
 
 下準備
