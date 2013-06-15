@@ -89,3 +89,23 @@ maliit-pluginの日本語化
     $ sudo apt-get install ubuntu-sdk maliit-framework-dev
 
 
+オリジナル
+==========
+まだこの方法だと動かない。 ::
+
+    $ git clone git://gitorious.org/maliit/maliit-framework.git
+    $ git clone git://gitorious.org/maliit/maliit-plugins.git
+    $ cd maliit-framework
+    $ qmake -r CONFIG+=local-install PREFIX="$HOME/maliit-local" LIBDIR="$HOME/maliit-local/lib64" CONFIG+=disable-gtk-cache-update
+    $ make -j4
+    $ make install
+    $ export LD_LIBRARY_PATH="$HOME/maliit-local/lib64"
+    $ cd ../maliit-plugins
+    $ export QMAKEFEATURES="$HOME/maliit-local/mkspecs/features"
+    $ qmake -r
+    $ make -j4
+    $ make install
+    $ "$HOME/maliit-local/bin/maliit-server" &
+    $ export QT_PLUGIN_PATH="$HOME/maliit-local/plugins"
+    $ QT_IM_MODULE=Maliit "$HOME/maliit-local/bin/maliit-exampleapp-plainqt"
+
